@@ -17,6 +17,7 @@ const rateLimiting = async (req, res, next) => {
 
       await accessObj.save();
       next();
+      return;
     }
 
     //R2-Rnth, compare the time R(n)-R(n-1)
