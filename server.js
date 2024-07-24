@@ -228,6 +228,7 @@ app.post("/create-item", isAuth, rateLimiting, async (req, res) => {
       data: todoDb,
     });
   } catch (error) {
+    console.log(error);
     return res.send({
       status: 500,
       message: "Internal server error",
@@ -368,7 +369,7 @@ app.post("/delete-item", isAuth, async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`server is running at: http://localhost:${8000}`);
+  console.log(`server is running at: http://localhost:${PORT}`);
 });
 
 //session

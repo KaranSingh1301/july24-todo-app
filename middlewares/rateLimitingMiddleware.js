@@ -20,9 +20,9 @@ const rateLimiting = async (req, res, next) => {
     }
 
     //R2-Rnth, compare the time R(n)-R(n-1)
-    console.log((Date.now() - accessDb.lastReqTime) / (1000 * 60));
+    console.log((Date.now() - accessDb.lastReqTime) / 1000);
 
-    const diff = (Date.now() - accessDb.lastReqTime) / (1000 * 60);
+    const diff = (Date.now() - accessDb.lastReqTime) / 1000;
 
     //less then our login
     if (diff < 1) {
